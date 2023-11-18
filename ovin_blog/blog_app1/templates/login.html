@@ -40,7 +40,8 @@
 <body>
   <div class="login-container">
     <h2>Login</h2>
-    <form action="your-server-endpoint" method="post">
+    <form action="{% url 'login' %}" method="post">
+      {% csrf_token %}
       <input type="text" name="username" placeholder="Username" required><br>
       <input type="password" name="password" placeholder="Password" required><br>
       <input type="submit" value="Login">
