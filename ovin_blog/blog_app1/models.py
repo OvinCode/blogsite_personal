@@ -21,3 +21,9 @@ class ImageModel(models.Model):
 
     def __str__(self):
         return self.picname if self.picname else f"ImageModel {self.id}"
+    
+
+class User(models.Model):
+    username = models.CharField(max_length=100)
+    email = models.EmailField()
+    password = models.CharField(max_length=100)
